@@ -4,6 +4,8 @@ functionality of generating and sending messages to another computer
 2. The Catcher (message catcher) should run on the second, „B“ ,computer and have the
 functionality of receiving the message and sending replies to the message received
 
+In Pitcher mode program has 3 types of message generator(PACKAGE_INFO,RANDOM,SYSTEM_INFO). Type setting in application.properties
+
 The parameters will be inserted through a command line and the program should print the
 statistics in the console window. The command arguments should be defined as it follows:
 

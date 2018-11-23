@@ -3,14 +3,11 @@ package com.synechron.roundtrip;
 import com.synechron.roundtrip.catcher.Catcher;
 import com.synechron.roundtrip.exception.SynechronPropertyException;
 import com.synechron.roundtrip.pitcher.Pitcher;
-import com.synechron.roundtrip.pitcher.PitcherProcessor;
 import com.synechron.roundtrip.pitcher.generator.*;
 import com.synechron.roundtrip.utils.CommandLineHelper;
 import com.synechron.roundtrip.utils.PropertyHelper;
 import org.apache.commons.cli.ParseException;
 import org.apache.log4j.Logger;
-
-import java.io.IOException;
 
 import static com.synechron.roundtrip.utils.CommandLineHelper.*;
 
@@ -34,10 +31,10 @@ public class TCPPing {
 
                 MessageGenerator messageGenerator;
                 switch (GeneratorType.valueOf(System.getProperty("generator.type"))) {
-                    case INFO:
+                    case SYSTEM_INFO:
                         messageGenerator = new PackageInfoGenerator();
                         break;
-                    case PACKAGE:
+                    case PACKAGE_INFO:
                         messageGenerator = new SystemInfoGenerator();
                         break;
                     case RANDOM:
